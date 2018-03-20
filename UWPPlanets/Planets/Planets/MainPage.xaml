@@ -1,0 +1,53 @@
+﻿<Page
+    x:Class="Planets.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Planets"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <TextBox x:Name="tbxUserName" TextChanged="tbxUserName_TextChanged">
+            
+        </TextBox>
+        
+        <Pivot x:Name="pvtPlanets" SelectionChanged="pvtPlanets_SelectionChanged"
+               Grid.Row="1">
+            
+            <PivotItem Header="Mercury" Background="Silver" x:Name="pvtMercury">
+                
+            </PivotItem>
+            <PivotItem Header="Venus" Background="Orange" x:Name="pvtVenus">
+                <Image Source="Assets/venus.jpg"/>
+            </PivotItem>
+            <PivotItem Header="Earth" Background="Blue" x:Name="pvtEarth">
+
+            </PivotItem>
+            <PivotItem Header="Mars" Background="Red" x:Name="pvtMars">
+
+            </PivotItem>
+            <PivotItem Header="Jupiter" Background="Beige" x:Name="pvtJupiter">
+
+            </PivotItem>
+            <PivotItem Header="Saturn" Background="Yellow" x:Name="pvtSaturn">
+
+            </PivotItem>
+            <PivotItem Header="Uranus" Background="Cyan" x:Name="pvtUranus">
+
+            </PivotItem>
+            <PivotItem Header="Neptune" Background="Blue" x:Name="pvtNeptune">
+
+            </PivotItem>
+            <PivotItem Header="Pluto" Background="Gray" x:Name="pvtPluto">
+
+            </PivotItem>
+        </Pivot>
+
+    </Grid>
+</Page>

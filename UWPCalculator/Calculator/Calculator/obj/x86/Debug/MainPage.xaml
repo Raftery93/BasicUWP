@@ -1,0 +1,36 @@
+﻿<Page
+    x:Class="Calculator.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Calculator"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d" Height="848.842" Width="1242.526">
+
+    <Page.Resources>
+        <local:MyAdder x:Key="xamlAdder"/>
+    </Page.Resources>
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Margin="0,-276,-0.333,0">
+
+        <StackPanel DataContext="{StaticResource xamlAdder}" VerticalAlignment="Center" HorizontalAlignment="Center">
+
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Value 1:"></TextBlock>
+                <TextBox Text= "{Binding Path=TopValue, Mode=TwoWay}"/>
+
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Value 2:"></TextBlock>
+                <TextBox Text="{Binding Path=BottomValue, Mode=TwoWay}"/>
+
+            </StackPanel>
+
+            <TextBlock Text="{Binding Path=AnswerValue}"/>
+
+        </StackPanel>
+
+    </Grid>
+</Page>
+
